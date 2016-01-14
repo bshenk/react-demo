@@ -7,5 +7,5 @@ var rootDir = './components/';
 var App = require(rootDir+'App.js');
 
 ReactDOM.render(
-	<App />, document.getElementById('content');
+	<App />, document.getElementById('content')
 );
