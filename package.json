@@ -1,5 +1,5 @@
 {
-  "name": "react-bootstrap",
+  "name": "react-demo",
   "version": "1.0.0",
   "description": "",
   "main": "gulpfile.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bshenk/ReactBootstrap.git"
+    "url": "git+https://github.com/bshenk/react-demo.git"
   },
   "author": "bshenk",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/bshenk/ReactBootstrap/issues"
+    "url": "https://github.com/bshenk/react-demo/issues"
   },
-  "homepage": "https://github.com/bshenk/ReactBootstrap#readme",
+  "homepage": "https://github.com/bshenk/react-demo#readme",
   "dependencies": {
     "react": "^0.14.6",
     "react-dom": "^0.14.6"
