@@ -1,13 +1,13 @@
 var React = require('react');
 var PropTypes = React.PropTypes;
 
+var Button = require('./Button');
+
 var App = React.createClass({
 
 	render: function() {
 		return (
-			<div className="app">
-				
-			</div>
+			<Button type="btn btn-default" title="Button" />
 		);
 	}
 
