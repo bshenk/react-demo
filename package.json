@@ -1,13 +1,21 @@
 {
-  "name": "bootstrap",
+  "name": "react-bootstrap",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bshenk/ReactBootstrap.git"
+  },
+  "author": "bshenk",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bshenk/ReactBootstrap/issues"
+  },
+  "homepage": "https://github.com/bshenk/ReactBootstrap#readme",
   "dependencies": {
     "react": "^0.14.6",
     "react-dom": "^0.14.6"
@@ -21,12 +29,9 @@
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-notify": "^2.2.0",
-    "gulp-rename": "^1.2.2",
     "gulp-stylus": "^2.2.0",
     "gulp-uglify": "^1.5.1",
     "gulp-util": "^3.0.7",
-    "reactify": "^1.1.1",
-    "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0",
     "watchify": "^3.7.0"
   }
