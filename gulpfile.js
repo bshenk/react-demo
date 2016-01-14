@@ -16,6 +16,27 @@ var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 var historyApiFallback = require('connect-history-api-fallback');
 
+var fs = require('fs');
+var path = require('path');
+var express = require('express');
+var bodyParser = require('body-parser');
+var app = express();
+
+/*
+    Express Server
+*/
+gulp.task('server', function() {
+    app.set('port', (process.env.PORT || 5000));
+
+    app.use('/', express.static(path.join(__dirname, 'build')));
+    app.use(bodyParser.json());
+    app.use(bodyParser.urlencoded({extended: true}));
+
+    app.listen(app.get('port'), function() {
+      console.log('Server started: http://localhost:' + app.get('port') + '/');
+    });
+});
+
 /*
   Styles Task
 */
@@ -92,7 +113,7 @@ gulp.task('scripts', function() {
 });
 
 // run 'scripts' task first, then watch for future changes
-gulp.task('default', ['images','styles','scripts'], function() {
+gulp.task('default', ['server','images','styles','scripts'], function() {
   gulp.watch('css/**/*', ['styles']); // gulp watch for stylus changes
   return buildScript('main.js', true); // browserify watch for JS changes
 });
