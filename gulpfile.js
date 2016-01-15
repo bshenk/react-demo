@@ -12,10 +12,6 @@ var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
 var buffer = require('vinyl-buffer');
 
-var browserSync = require('browser-sync');
-var reload = browserSync.reload;
-var historyApiFallback = require('connect-history-api-fallback');
-
 var fs = require('fs');
 var path = require('path');
 var express = require('express');
@@ -51,7 +47,6 @@ gulp.task('styles',function() {
       .pipe(stylus())
       .pipe(autoprefixer())
       .pipe(gulp.dest('./build/css/'))
-      .pipe(reload({stream:true}))
 });
 
 /*
@@ -91,11 +86,10 @@ function buildScript(file, watch) {
       .pipe(source('app.js'))
       .pipe(gulp.dest('./build/'))
       // If you also want to uglify it
-      // .pipe(buffer())
-      // .pipe(uglify())
-      // .pipe(rename('app.min.js'))
-      // .pipe(gulp.dest('./build'))
-      .pipe(reload({stream:true}))
+      .pipe(buffer())
+      .pipe(uglify())
+      .pipe(rename('app.min.js'))
+      .pipe(gulp.dest('./build'))
   }
 
   // listen for an update and run rebundle
