@@ -85,7 +85,6 @@ function buildScript(file, watch) {
       .on('error', handleErrors)
       .pipe(source('app.js'))
       .pipe(gulp.dest('./build/'))
-      // If you also want to uglify it
       .pipe(buffer())
       .pipe(uglify())
       .pipe(rename('app.min.js'))
