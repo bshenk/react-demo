@@ -1,6 +1,5 @@
 var React = require('react');
 var PropTypes = React.PropTypes;
-var bootstrap = require('bootstrap');
 
 var Button = React.createClass({
 
