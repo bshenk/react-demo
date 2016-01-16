@@ -54,3 +54,22 @@ ul {
 ul {
   padding-left: 30px;
 }
+.newTodo {
+  padding: 10px 0;
+}
+.content {
+  opacity: 0;
+  transition: opacity 1s ease-in;
+  -webkit-transition: opacity 1s ease-in;
+  -moz-transition: opacity 1s ease-in;
+  -o-transition: opacity 1s ease-in;
+}
+.loaded {
+  opacity: 1;
+}
+.input-group {
+  margin-bottom: 15px;
+}
+.divider {
+  margin-top: -5px;
+}
